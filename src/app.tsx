@@ -48,7 +48,7 @@ export default function App() {
       formattedTime += `:${Math.floor(seconds).toString().padStart(2, '0')}`;
     }
     if (showMilliseconds()) {
-      formattedTime += `.${Math.floor(milliseconds)}`;
+      formattedTime += `.${Math.floor(milliseconds).toString().padStart(3, '0')}`;
     }
     formattedTime += use12HourFormat() ?  ` ${period}` : ``;
 
@@ -80,7 +80,7 @@ export default function App() {
 
   return (
     <MetaProvider>
-      <Title>SolidStart - Basic</Title>
+      <Title>HourOfMyLife</Title>
       <main style={{ "text-align": 'center' }}>
         <div>
           {(() => {

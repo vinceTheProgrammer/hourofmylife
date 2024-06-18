@@ -15,7 +15,7 @@ export default function HourglassProgressBar(props: { progress: any; }) {
   return (
     <div style={{ position: 'relative', width: '100px', height: `${hourglassSectionHeight * 4 + 10}px`, margin: '20px auto' }}>
       <svg style={{height: '215px'}}>
-        <use href="/hourglass.svg#svg1" />
+        <use href="https://raw.githubusercontent.com/vinceTheProgrammer/hourofmylife/main/public/hourglass.svg#svg1" />
       </svg>
         <div style={{
         position: 'absolute',
