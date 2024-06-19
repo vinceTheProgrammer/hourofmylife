@@ -1,0 +1,1 @@
+import{g as n,f as i,i as l,e as o,t as s,T as m}from"./index-DMoB56hL.js";var u=s("<main><!$><!/><h1>About");function f(){return(()=>{var e=n(u),r=e.firstChild,[t,a]=i(r.nextSibling);return t.nextSibling,l(e,o(m,{children:"About"}),t,a),e})()}export{f as default};
