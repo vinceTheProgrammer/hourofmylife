@@ -42,7 +42,8 @@ export default function App() {
     const seconds = (minutes % 1) * 60;
     const milliseconds = (seconds % 1) * 1000;
     const period = hours >= 12 ? 'PM' : 'AM';
-    const formatHours = use12HourFormat() ? (hours % 12 === 0 ? 12 : hours % 12) : hours;
+    const formatHours = use12HourFormat() ? (Math.floor(hours % 12) === 0 ? 12 : hours % 12) : hours;
+
     let formattedTime = `${Math.floor(formatHours)}:${Math.floor(minutes).toString().padStart(2, '0')}`;
     if (showSeconds()) {
       formattedTime += `:${Math.floor(seconds).toString().padStart(2, '0')}`;
@@ -59,6 +60,7 @@ export default function App() {
     return {
       ageInYears: Math.floor(ageInYears),
       hours: Math.floor(hours) === 0 ? 12 : Math.floor(hours), // Adjust 0 hour to 12 for 12-hour clock
+      formatHours: formatHours,
       minutes: Math.floor(minutes),
       seconds: Math.floor(seconds),
       milliseconds: Math.floor(milliseconds),

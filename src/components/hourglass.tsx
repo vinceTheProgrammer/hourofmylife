@@ -37,19 +37,19 @@ export default function HourglassProgressBar(props: { progress: any; }) {
       </svg>
         <div style={{
         position: 'absolute',
-        bottom: `${hourglassSectionHeight * 2 + 10}px`,
+        bottom: `${hourglassSectionHeight * 2 + 7}px`,
         left: '0',
         width: '100%',
-        height: `${Math.max(((100 - getTransformedProgress()) / 100) * hourglassSectionHeight - 2, 0)}%`,
-        "clip-path": `polygon(50px 110%, ${getTransformedProgress() / 2}% 0px, ${Math.min(105 - getTransformedProgress() / 2, 100)}% 0px)`,
+        height: `${Math.max(((101 - getTransformedProgress()) / 100) * hourglassSectionHeight - 2, 0)}%`,
+        "clip-path": `polygon(51px 100%, ${getTransformedProgress() / 2}% 0px, ${Math.min(100 - getTransformedProgress() / 2, 100)}% 0px)`,
         background: 'rgba(255,255,255,1)',
         }} />
         <div style={{
           position: 'absolute',
           bottom: `${hourglassSectionHeight * 2}px`,
           left: '49px',
-          width: '5px',
-          height: `5px`,
+          width: '4px',
+          height: `4px`,
           background: 'rgba(255,255,255,1)',
           animation: 'fallingSand 2s ease-in infinite',
         }}>
